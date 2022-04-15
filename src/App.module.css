@@ -1,0 +1,20 @@
+:root {
+  --blue: #111e6c;
+  --red: #ef434e;
+  --darkGray: #323232;
+  --lightGray: #969696;
+  --lightBlue: #e5e7ef;
+  --background: #F5F5F8;
+  --headerEnd: #80395C;
+}
+
+.app {
+  background: var(--background);
+}
+
+.maxContent {
+  max-width: 1280px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+}

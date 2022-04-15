@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  background: linear-gradient(to right, var(--blue) 0 40%, var(--headerEnd));
+  color: white;
+  padding: 10px 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  composes: maxContent from '../../App.module.css';
+}
+
+.navigationList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navigationLink {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}

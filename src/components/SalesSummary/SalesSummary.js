@@ -1,3 +1,5 @@
+import { Info } from '../../Icons';
+import { getFormattedCurrency } from '../../utils/index';
 import styles from './SalesSummary.module.css';
 
 function SalesSummary({ name, date, value }) {
@@ -7,11 +9,11 @@ function SalesSummary({ name, date, value }) {
         <h2 className={styles.title}>
           {`Total de ventas de ${name}`}
         </h2>
+        <Info size={18} />
       </header>
       <div className={styles.content}>
         <h3 className={styles.price}>
-          $
-          {value}
+          {getFormattedCurrency(value)}
         </h3>
         <span className={styles.date}>{date}</span>
       </div>

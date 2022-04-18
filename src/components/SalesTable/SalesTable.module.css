@@ -1,0 +1,51 @@
+.container {
+  border-radius: 15px;
+  background: white;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin: 0;
+  background: linear-gradient(to right, var(--blue) 0 70%, var(--headerEnd));
+  color: white;
+  padding: 10px 25px 7px;
+
+}
+
+.table {
+  display: block;
+  width: 100%;
+}
+
+.tableHead {
+  display: block;
+  width: 100%;
+}
+
+.tableHeadRow {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+  padding: 0 25px;
+  text-align: left;
+  color: var(--darkGray);
+  border-bottom: 1px solid var(--lightGray);
+}
+
+.tableHeadCell {
+  font-weight: 500;
+  color: var(--darkGray);
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+.tableBody {
+  display: block;
+}
+
+@media screen and (max-width: 978px) {
+  .tableHead {
+    display: none;
+  }
+}

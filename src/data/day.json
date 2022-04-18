@@ -1,0 +1,43 @@
+{
+  "totalSales": 1560000,
+  "periodDescription": "Septiembre 21",
+  "periodShortName": "hoy",
+  "periodSales": [
+    {
+      "transactionId": "MAIM32MKAL2NSV3",
+      "transactionType": 1,
+      "transactionStatus": "Cobro exitoso",
+      "date": "2022-04-18T01:54:26.950Z",
+      "paymentMethod": {
+        "name": "mastercard",
+        "label": "**** **** **** 7771"
+      },
+      "amount": 250000,
+      "deduction": 1500
+    },
+    {
+      "transactionId": "2JLA92SL293LA32FB",
+      "transactionType": 1,
+      "transactionStatus": "Cobro no realizado",
+      "date": "2022-04-18T01:54:26.950Z",
+      "paymentMethod": {
+        "name": "mastercard",
+        "label": "**** **** **** 2371"
+      },
+      "amount": 150000,
+      "deduction": null
+    },
+    {
+      "transactionId": "4MAAN34232NAJWI",
+      "transactionType": 2,
+      "transactionStatus": "Cobro exitoso",
+      "date": "2022-04-18T01:54:26.950Z",
+      "paymentMethod": {
+        "name": "visa",
+        "label": "**** **** **** 7822"
+      },
+      "amount": 250000,
+      "deduction": 1500
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+.desktopRow {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+  padding: 12px 25px;
+  border-bottom: 1px solid var(--lightGray);
+  border-left: 5px solid var(--lightGray);
+  color: var(--lightGray);
+}
+
+.odd {
+  border-left: 5px solid var(--blue);
+}
+
+.last {
+  border-bottom: none;
+}
+
+.transaction {
+  color: var(--blue);
+  fill: var(--blue);
+  font-weight: 500;
+}
+
+.transaction svg {
+  margin-right: 4px;
+}
+
+.amount {
+  color: var(--blue);
+  margin: 0;
+}
+
+.deductionLabel {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 2px 0;
+}
+
+.deduction {
+  color: var(--red);
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+.mobileRow {
+  display: none;
+}
+
+@media screen and (max-width: 978px) {
+  .desktopRow {
+    display: none;
+  }
+
+  .mobileRow {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--lightGray);
+    border-left: 5px solid var(--blue);
+  }
+
+  .mobileRow:nth-child(4n) {
+    border-left: 5px solid var(--lightGray);
+  }
+
+  .mobileRow:last-child {
+    border-bottom: none;
+  }
+
+  .cellDetail {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+
+  .expandButton {
+    border: none;
+    font-size: 20px;
+    background: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: var(--blue);
+    font-weight: bold;
+    padding: 0 4px;
+  }
+
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+  }
+}

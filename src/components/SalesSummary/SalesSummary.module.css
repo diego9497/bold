@@ -11,11 +11,15 @@
   display: flex;
   background: linear-gradient(to right, #643561 0 40%, #B36B7E);
   color: white;
+  fill: white;
   padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   font-weight: bold;
   margin: 0;
 }
@@ -33,11 +37,19 @@
   font-weight: bold;
   margin: 0;
   margin-bottom: 7px;
+  color: #643561;
   background: linear-gradient(to right, #643561 0 40%, #B36B7E);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .date {
   color: var(--blue)
+}
+
+@media screen and (max-width: 978px) {
+  .container {
+    max-width: 100%;
+  }
 }

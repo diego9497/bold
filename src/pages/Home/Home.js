@@ -2,15 +2,13 @@ import { useState } from 'react';
 
 import styles from './Home.module.css';
 import SalesSummary from '../../components/SalesSummary/SalesSummary';
-// eslint-disable-next-line
 import SalesTabs from '../../components/SalesTabs/SalesTabs';
 import SalesTable from '../../components/SalesTable/SalesTable';
+import { TAB_NAMES } from '../../constants';
 
-export const TAB_NAMES = {
-  TODAY: 'Hoy',
-  WEEK: 'Esta semana',
-  MONTH: 'Mes',
-};
+import month from '../../data/month.json';
+import week from '../../data/week.json';
+import day from '../../data/day.json';
 
 function Home() {
   const [activeTab, setActiveTab] = useState(TAB_NAMES.TODAY);
@@ -19,13 +17,25 @@ function Home() {
     setActiveTab(tabName);
   };
 
+  const data = {
+    [TAB_NAMES.TODAY]: day,
+    [TAB_NAMES.WEEK]: week,
+    [TAB_NAMES.MONTH]: month,
+  };
+
+  const currentTab = data[activeTab];
+
   return (
     <>
       <section className={styles.summaryTabs}>
-        <SalesSummary date="Septiembre, 2020" name="septiembre" value="1'560.000" />
+        <SalesSummary
+          date={currentTab.periodDescription}
+          name={currentTab.periodShortName}
+          value={currentTab.totalSales}
+        />
         <SalesTabs currentTab={activeTab} onTabClick={handleTabClick} />
       </section>
-      <SalesTable />
+      <SalesTable sales={currentTab.periodSales} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 .main {
   padding-top: 40px;
+  padding-bottom: 40px;
   composes: maxContent from '../../App.module.css';
 }

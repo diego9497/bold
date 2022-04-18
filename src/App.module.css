@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:global(body),
+:global(button) {
+  font-family: 'Montserrat', sans-serif;
+}
+
 :root {
   --blue: #111e6c;
   --red: #ef434e;
@@ -17,4 +24,16 @@
   padding-left: 40px;
   padding-right: 40px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 15.5px;
+    ;
+  }
+
+  .maxContent {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
